@@ -1,7 +1,44 @@
+<!DOCTYPE html>
 <html>
- 
+<head>
+    <title>My Weight Lifting Database</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-  <h1>Alex's lifting website (under construction)</h1>
+    <h1>My Weight Lifting Database</h1>
+    <h2>Exercise Log</h2>
+    <table>
+        <tr>
+            <th>Exercise</th>
+            <th>Date</th>
+            <th>Weight (kg)</th>
+            <th>Repetitions</th>
+            <th>One Rep Max (kg)</th>
+        </tr>
+        <tr>
+            <td>Exercise 1</td>
+            <td>2023-04-01</td>
+            <td>100.5</td>
+            <td>5</td>
+            <td>110.5</td>
+        </tr>
+        <!-- Add more rows dynamically based on data from the database -->
+    </table>
+    <h2>Add Log Entry</h2>
+    <form action="add_log_entry.php" method="post">
+        <label for="exercise">Exercise:</label>
+        <select id="exercise" name="exercise">
+            <option value="1">Exercise 1</option>
+            <option value="2">Exercise 2</option>
+            <!-- Add more options dynamically based on data from the database -->
+        </select><br>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br>
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" name="weight" step="0.01" required><br>
+        <label for="repetitions">Repetitions:</label>
+        <input type="number" id="repetitions" name="repetitions" required><br>
+        <input type="submit" value="Add Log Entry">
+    </form>
 </body>
- 
 </html>
